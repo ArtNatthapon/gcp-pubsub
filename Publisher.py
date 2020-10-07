@@ -2,9 +2,9 @@ from google.cloud import pubsub_v1
 from Subscriber import *
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key.json"
-project_id = 'pivotal-sprite-285504'
-topic_id = 'my-topic'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = ""   # key
+project_id = ''
+topic_id = ''
 
 publisher = pubsub_v1.PublisherClient()
 
