@@ -7,9 +7,9 @@ import os, time, random
 column6 = random.randint(3, 5)
 
 ############ Configure for Google Cloud #################
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key.json"
-project_id = 'pivotal-sprite-285504'
-sub_name = 'my-sub'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = ""
+project_id = ''
+sub_name = ''
 ############ Configure for Google Cloud #################
 
 def callback(message):
@@ -26,7 +26,7 @@ def callback(message):
     data = message
     column1 = received[4:12]            # Date
     column2 = received[13:21]           # Time
-    column3 = str(received[31:35])      # Temp
+    column3 = str(received[31:35])      # TempX
     column4 = str(received[37:41])      # Humi
     column5 = str(received[42:44])      # Status
     insert_todb_dht11(Date=column1,Time=column2, Temperature=column3,\
