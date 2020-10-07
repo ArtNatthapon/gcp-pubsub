@@ -7,9 +7,9 @@ from mysql.connector import Error, errorcode
 
 column6 = random.randint(3, 5)
 ############ Configure for Google Cloud #################
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'key.json'
-project_id = 'pivotal-sprite-285504'
-sub_name = 'my-sub'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = ''
+project_id = ''
+sub_name = ''
 ############ Configure for Google Cloud #################
 
 def callback(message):
@@ -52,10 +52,10 @@ def insert_todb_dht11(Date, Time, Temperature, Humidity, Status, Voltage):
 
     '''
     try:
-        connection = mysql.connector.connect(host='34.126.103.238',
-                                             database='smart_home',
-                                             user='NSR_ADMIN',
-                                             password='natthapon024299')
+        connection = mysql.connector.connect(host='',
+                                             database='',
+                                             user='',
+                                             password='')
         mySql_insert_query = """INSERT INTO DHT11_Sensor (Date, Time, Temperature, Humidity, Status, Voltage) \
                                 VALUES (%s,%s,%s,%s,%s,%s)"""
         tupl = (Date, Time, Temperature, Humidity, Status, Voltage)
