@@ -7,10 +7,10 @@ from datetime import datetime
 
 def insert_todb_dht11(Date, Time, Temperature, Humidity, Status, Voltage):
     try:
-        connection = mysql.connector.connect(host='34.126.103.238',
-                                             database='smart_home',
-                                             user='NSR_ADMIN',
-                                             password='natthapon024299')
+        connection = mysql.connector.connect(host='',
+                                             database='',
+                                             user='',
+                                             password='')
             mySql_insert_query = """INSERT INTO DHT11 (Date, Time, Temperature, Humidity, Status, Voltage) \
                                     VALUES (%s,%s,%s,%s,%s,%s)"""
         tupl = (Date, Time, Temperature, Humidity, Status, Voltage)
